@@ -5,82 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Star Engineering - Refactored</title>
+    <script src="script.js"></script>
   </head>
+
   <body>
-    <script>
-      function add(value1, value2) {
-        return value1 + " plus " + value2 + " = " + value1 + value2;
-      }
-    </script>
-
-    <script>
-      function subtract(value1, value2) {
-        return value1 + " minus " + value2 + " = " + value1 - value2;
-      }
-    </script>
-
-    <script>
-      function divide(value1, value2) {
-        return value1 + " divided by " + value2 + " = " + value1 / value2;
-      }
-    </script>
-
-    <script>
-      function multiply(value1, value2) {
-        return value1 + " multiplied " + value2 + " = " + value1 * value2;
-      }
-    </script>
-
-    <script>
-      alert(add(14, 15));
-      alert(divide(100, 20));
-      alert(subtract(25, 4));
-      alert(multiply(19, 3));
-    </script>
+    <button onclick="console.log(add(14,15))">Test Add</button>
+    <button onclick="console.log(divide(100, 20))">Test Divide</button>
+    <button onclick="console.log(subtract(25, 4))">Test subtract</button>
+    <button onclick="console.log(multiply(19, 3))">Test multiply</button>
+    <button onclick="console.log(getFormattedDate())">Test Date</button>
   </body>
-  <!--script to return formatted current date-->
-  <script>
-    let now = new Date();
-
-    let days = new Array(
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    );
-
-    let months = new Array(
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    );
-
-    let date = (now.getDate() < 10 ? "0" : "") + now.getDate();
-
-    function getFourDigits(number) {
-      return number < 1000 ? number + 1900 : number;
-    }
-    today =
-      days[now.getDay()] +
-      ", " +
-      months[now.getMonth()] +
-      " " +
-      date +
-      ", " +
-      getFourDigits(now.getYear());
-
-    alert(today);
-  </script>
 </html>
